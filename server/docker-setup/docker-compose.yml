@@ -2,7 +2,7 @@ services:
   mocksocket-server:
     build:
       context: ..
-      dockerfile: docker/Dockerfile
+      dockerfile: docker-setup/Dockerfile
     image: mocksocket-server:local
     ports:
       - "8080:8080"
