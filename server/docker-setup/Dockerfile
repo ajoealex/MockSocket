@@ -8,6 +8,6 @@ RUN npm ci --omit=dev
 COPY index.js ./
 
 ENV NODE_ENV=production
-EXPOSE 8080
+EXPOSE 7896
 
 CMD ["node", "index.js"]

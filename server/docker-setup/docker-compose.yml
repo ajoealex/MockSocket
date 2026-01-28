@@ -5,6 +5,6 @@ services:
       dockerfile: docker-setup/Dockerfile
     image: mocksocket-server:local
     ports:
-      - "8080:8080"
+      - "7896:7896"
     environment:
-      - PORT=8080
+      - PORT=7896
