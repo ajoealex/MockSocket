@@ -4,9 +4,9 @@ Two-part WebSocket test app:
 - `server/` Node.js WebSocket server
 - `ui/` Vite + React + Tailwind UI
 
-Live app: `https://ajoealex.github.io/MockSocket/`
+Live app: [https://ajoealex.github.io/MockSocket/](https://ajoealex.github.io/MockSocket/)
 
-Server setup repo: `https://github.com/ajoealex/MockSocket`
+Server setup repo: [https://github.com/ajoealex/MockSocket](https://github.com/ajoealex/MockSocket)
 
 ## Requirements
 - Node.js 18+ (tested on 22)
