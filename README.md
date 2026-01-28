@@ -6,7 +6,7 @@ Two-part WebSocket test app:
 
 Live app: `https://ajoealex.github.io/MockSocket/`
 
-Server setup instructions: `https://github.com/ajoealex/MockSocket`
+Server setup repo: `https://github.com/ajoealex/MockSocket`
 
 ## Requirements
 - Node.js 18+ (tested on 22)
