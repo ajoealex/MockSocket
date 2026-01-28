@@ -1,0 +1,10 @@
+services:
+  mocksocket-server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: mocksocket-server:local
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
