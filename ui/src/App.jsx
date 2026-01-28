@@ -4,7 +4,17 @@ import { DEFAULT_WS_HOST, DEFAULT_WS_PORT } from "./config.js";
 
 const WS_HOST = DEFAULT_WS_HOST;
 const WS_PORT = DEFAULT_WS_PORT;
-const DEFAULT_WS_URL = `ws://${WS_HOST}:${WS_PORT}`;
+const DEFAULT_WS_URL = (() => {
+  const hasScheme = /^wss?:\/\//i.test(WS_HOST);
+  const base = hasScheme ? WS_HOST : `ws://${WS_HOST}`;
+  try {
+    const url = new URL(base);
+    if (WS_PORT && !url.port) url.port = String(WS_PORT);
+    return url.toString();
+  } catch {
+    return WS_PORT ? `${base}:${WS_PORT}` : base;
+  }
+})();
 
 export default function App() {
   const [view, setView] = useState("connect");
