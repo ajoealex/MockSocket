@@ -106,4 +106,14 @@ wss.on("connection", (ws) => {
   });
 });
 
+const KEEP_ALIVE_INTERVAL = 30_000;
+
+setInterval(() => {
+  for (const client of wss.clients) {
+    if (client.readyState === client.OPEN) {
+      sendJson(client, { type: "keep-alive", timestamp: Date.now() });
+    }
+  }
+}, KEEP_ALIVE_INTERVAL);
+
 console.log(`WebSocket server listening on ws://0.0.0.0:${PORT}`);
